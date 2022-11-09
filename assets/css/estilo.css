@@ -209,13 +209,13 @@ body {
     padding: 16px;
     display: grid;
     grid-template-columns: auto 1fr;
-    gap: 8px;
+    gap: 12px;
 }
 .cartap__destaque {
     grid-column: span 2;
 }
 .cartao__titulo {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 700;
     grid-column: span 2;
 }
@@ -233,6 +233,10 @@ body {
     content: "\e90c";
     margin-right: 8px;
 }
+.cartao__info--valor::before {
+    content: "\e905";
+    margin-right: 8px;
+}
 .cartao__info--visualizacao::before {
     content: "\e90f";
     margin-right: 8px;
@@ -247,9 +251,14 @@ body {
     border-radius: 10px;
     font-size: 0.9rem;
     justify-self: flex-end;
+    cursor: pointer;
 }
 .cartao__botao--play::before {
     content: "\e90b";
+    font-size: 24px;
+}
+.cartao__botao--carrinho::before {
+    content: "\e901";
     font-size: 24px;
 }
 .cartao__botao--destaque {
@@ -274,7 +283,7 @@ body {
     }
     .cartao__botao--destaque {
         grid-column: auto;
-        padding: 16px 8px;
+        padding: 16px 22px;
     }
     .cartao--recentes {
         display: grid;
@@ -306,7 +315,7 @@ body {
         gap: 8px;
     }
     .cartao__item-thumbnail {
-        width: 32px;
+        width: 40px;
         grid-row: span 2;
     }
     .cartao__item-titulo {
